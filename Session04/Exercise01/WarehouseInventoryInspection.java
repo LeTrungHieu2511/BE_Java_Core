@@ -54,6 +54,6 @@ public class WarehouseInventoryInspection {
                 minIndex,
                 minStock
                 );
-        scanner.close();
+        sc.close();
     }
 }
