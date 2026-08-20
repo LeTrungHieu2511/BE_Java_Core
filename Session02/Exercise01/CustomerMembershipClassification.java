@@ -8,29 +8,29 @@ public class CustomerMembershipClassification {
 
         System.out.println("Nhap tong chi tieu tich luy (VND): ");
         double totalSpending = scanner.nextDouble();
-        double chietKhau = 0;
-        String hang;
+        double discount = 0;
+        String rank;
         if (totalSpending <= 2000000) {
-            chietKhau = 2;
-            hang = "Dong(Bronze)";
+            discount = 2;
+            rank = "Dong(Bronze)";
         } else if (totalSpending <= 5000000) {
-            chietKhau = 5;
-            hang = "Bac(Silver)";
+            discount = 5;
+            rank = "Bac(Silver)";
         } else if (totalSpending <= 15000000) {
-            chietKhau = 10;
-            hang = "Vang(Gold)";
+            discount = 10;
+            rank = "Vang(Gold)";
         } else {
-            chietKhau = 15;
-            hang = "Kim cuong(Diamond)";
+            discount = 15;
+            rank = "Kim cuong(Diamond)";
         }
 
         boolean isVip = false;
-        if (chietKhau >=10) {
+        if (discount >=10) {
             isVip = true;
         }
-        String danhHieu = "Khach hang tieu chuan";
+        String title = "Khach hang tieu chuan";
         if (isVip) {
-            danhHieu = "Khach hang VIP";
+            title = "Khach hang VIP";
         }
 
         System.out.printf("""
@@ -44,9 +44,9 @@ public class CustomerMembershipClassification {
                 +-------------------------------------------------------+
                 """,
                 totalSpending,
-                hang,
-                chietKhau,
-                danhHieu
+                rank,
+                discount,
+                title
                 );
         scanner.close();
     }
