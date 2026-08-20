@@ -66,13 +66,7 @@ public class ColdStorageTemperatureConverter {
                 tempK,
                 trangThai
         );
-
-
-
-
-
-
-
+        sc.close();
 
     }
 }
