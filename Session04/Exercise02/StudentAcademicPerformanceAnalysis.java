@@ -1,4 +1,4 @@
-package vn.edu.rikkei.session04.ex01;
+package vn.edu.rikkei.session04.ex02;
 
 import java.util.Scanner;
 import java.util.Arrays;
