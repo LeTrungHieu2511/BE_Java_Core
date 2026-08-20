@@ -1,4 +1,4 @@
-package vn.edu.rikkei.session04.ex01;
+package vn.edu.rikkei.session04.ex03;
 
 import java.util.Scanner;
 import java.util.Arrays;
@@ -9,26 +9,26 @@ public class WeatherStationTemperatureMatrix {
 
         System.out.println("--- NHẬP DỮ LIỆU QUAN TRẮC NHIỆT ĐỘ 7 NGÀY (7x3) ---");
         double[][] tempMatrix = new double[8][4];
-        double tbTuan=0, tbSang=0, tbTrua=0, tbToi=0;
+        double aWeek=0, aMorning=0, aAfternoon=0, aEvening=0;
         double tongNgay=0;
-        String ngayThu;
+        String dayAWeek;
 
         for (int i = 0; i <  8 ; i++) {
 
             if (i ==6) {
-                ngayThu = "Chủ nhật";
+                dayAWeek = "Chủ nhật";
             } else {
-                ngayThu = "Thứ " + (i+2);
+                dayAWeek = "Thứ " + (i+2);
             }
             if (i == 7) {
-                tempMatrix[i][0]= tbSang/7;
-                tempMatrix[i][1]= tbTrua/7;
-                tempMatrix[i][2]= tbToi/7;
-                tempMatrix[i][3]= tbTuan/7;
+                tempMatrix[i][0]= aMorning/7;
+                tempMatrix[i][1]= aAfternoon/7;
+                tempMatrix[i][2]= aEvening/7;
+                tempMatrix[i][3]= aWeek/7;
                 continue;
             }
 
-            System.out.printf("[Ngày %d - %s] ",i+1,ngayThu);
+            System.out.printf("[Ngày %d - %s] ",i+1,dayAWeek);
 
             for (int j = 0; j < 4 ; j++) {
                 if (j ==0) {
@@ -42,16 +42,16 @@ public class WeatherStationTemperatureMatrix {
                 }
                 if (j ==3) {
                     tempMatrix[i][j] = tongNgay/3;
-                    tbTuan +=tempMatrix[i][j];
+                    aWeek +=tempMatrix[i][j];
                     tongNgay=0;
                     continue;
                 }
                 tempMatrix[i][j] = sc.nextDouble();
                 tongNgay+=tempMatrix[i][j];
             }
-            tbSang +=tempMatrix[i][0];
-            tbTrua +=tempMatrix[i][1];
-            tbToi +=tempMatrix[i][2];
+            aMorning +=tempMatrix[i][0];
+            aAfternoon +=tempMatrix[i][1];
+            aEvening +=tempMatrix[i][2];
         }
 
         System.out.print("""
@@ -64,16 +64,16 @@ public class WeatherStationTemperatureMatrix {
 
         for (int i = 0; i < 8 ;i++ ) {
             if ( i== 6) {
-                ngayThu ="Chủ nhật";
+                dayAWeek ="Chủ nhật";
             } else if (i == 7) {
                 System.out.println("+-----------------------------------------------------------------+");
-                ngayThu = "TB CẢ TUẦN ";
+                dayAWeek = "TB CẢ TUẦN ";
             } else {
-                ngayThu = "Thứ " + (i+2);
+                dayAWeek = "Thứ " + (i+2);
             }
 
             System.out.printf("| %-11s | %7.2f °C | %7.2f °C | %7.2f °C | %7.2f °C |\n",
-                    ngayThu,
+                    dayAWeek,
                     tempMatrix[i][0],
                     tempMatrix[i][1],
                     tempMatrix[i][2],
