@@ -52,6 +52,6 @@ public class StudentAcademicPerformanceAnalysis {
                 ratio,
                 list
         );
-        scanner.close();
+        sc.close();
     }
 }
