@@ -32,11 +32,11 @@ public class CreditCardApplicationVetting {
             creditLimit = monthlyIncome * 3;
         }
 
-        String noXau ;
+        String badDebtStatus ;
         if (hasBadDebt == false) {
-            noXau ="Khong co";
+            badDebtStatus ="ĐẠT YÊU CẦU";
         } else {
-            noXau = "Co";
+            badDebtStatus = "TỪ CHỐI";
         }
 
         System.out.printf("""
@@ -56,11 +56,12 @@ public class CreditCardApplicationVetting {
                 fullName,
                 age,
                 monthlyIncome,
-                noXau,
+                badDebtStatus,
                 isApproved,
                 creditLimit
 
         );
+        scanner.close();
 
     }
 }
