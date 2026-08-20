@@ -1,3 +1,5 @@
+package vn.edu.rikkei.session02.ex01;
+
 import java.util.Scanner;
 
 public class CustomerMembershipClassification {
