@@ -27,15 +27,15 @@ public class WarehouseInventoryInspection {
 
         }
         int minStock = stock[0], minIndex = 0;
-        int tong = stock[0];
+        int total = stock[0];
         for (int i = 1; i<N; i++) {
-            tong +=stock[i];
+            total +=stock[i];
             if ( stock[i] < minStock) {
                 minStock = stock[i];
                 minIndex = i;
             }
         }
-        double tonKhoBinhQuan = tong*1.0/N;
+        double tonKhoBinhQuan = total*1.0/N;
 
         System.out.printf("""
                 +-------------------------------------------------------+
@@ -49,7 +49,7 @@ public class WarehouseInventoryInspection {
                 |  -> Mã hàng #%-3d có tồn kho thấp nhất: %-3d sản phẩm   |
                 +-------------------------------------------------------+""",
                 Arrays.toString(stock),
-                tong,
+                total,
                 tonKhoBinhQuan,
                 minIndex,
                 minStock
