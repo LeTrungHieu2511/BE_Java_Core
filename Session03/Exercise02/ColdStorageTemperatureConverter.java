@@ -1,4 +1,4 @@
-package Exercise02;
+package vn.edu.rikkei.session03.ex02;
 
 import java.util.Scanner;
 
@@ -17,24 +17,25 @@ public class ColdStorageTemperatureConverter {
         System.out.print("Nhập giá trị nhiệt độ: ");
         double temp = sc.nextDouble();
         double tempF, tempC, tempK;
+        final double KELVIN_OFFSET = 273.15, FAHRENHEIT_OFFSET = 32;
 
         switch(chon) {
             case 1: {
                 tempC = temp;
-                tempK = tempC + 273.15;
-                tempF = tempC * 9 / 5 + 32;
+                tempK = tempC + KELVIN_OFFSET;
+                tempF = tempC * 9 / 5 + FAHRENHEIT_OFFSET;
                 break;
             }
             case 2: {
                 tempF = temp;
-                tempC = (tempF - 32.0) * 5.0 / 9.0;
-                tempK = tempC + 273.15;
+                tempC = (tempF - FAHRENHEIT_OFFSET) * 5.0 / 9.0;
+                tempK = tempC + KELVIN_OFFSET;
                 break;
             }
             case 3: {
                 tempK = temp;
-                tempC = tempK - 273.15;
-                tempF = tempC * 9 / 5 + 32;
+                tempC = tempK - KELVIN_OFFSET;
+                tempF = tempC * 9 / 5 + FAHRENHEIT_OFFSET;
                 break;
             }
             default: {
@@ -43,8 +44,8 @@ public class ColdStorageTemperatureConverter {
             }
         }
         String trangThai;
-
-        if ( tempC >= -2.0 && tempC <= 8.0) {
+        final double SAVE_MAX= 8, SAVE_MIN = -2;
+        if ( tempC >= SAVE_MIN && tempC <= SAVE_MAX) {
             trangThai = "AN TOÀN - ĐẠT CHUẨN BẢO QUẢN";
         } else {
             trangThai = "CẢNH BÁO NGUY HIỂM - VI PHẠM DẢI NHIỆT ĐỘ VACCINE";
