@@ -17,7 +17,7 @@ public class StudentAcademicPerformanceAnalysis {
             System.out.printf("Nhập điểm HV #%d: ",i);
             scores[i] = sc.nextDouble();
             while (scores[i] <0 || scores[i] >10) {
-                System.out.print("Diem thi khong hop le, vui long nhap lai: ");
+                System.out.print("Điểm thi không hợp lệ, vui lòng nhập lại: ");
                 scores[i] = sc.nextDouble();
             }
         }
