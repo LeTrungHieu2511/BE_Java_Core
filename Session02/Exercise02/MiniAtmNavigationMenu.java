@@ -1,3 +1,5 @@
+package vn.edu.rikkei.session02.ex02;
+
 import java.util.Scanner;
 
 public class MiniAtmNavigationMenu {
@@ -25,42 +27,43 @@ public class MiniAtmNavigationMenu {
                     break;
                 case 2:
                     System.out.println("Nhập số tiền cần nộp: ");
-                    double nop = scanner.nextDouble();
-                    if (nop > 0) {
-                        balance += nop;
+                    double pay = scanner.nextDouble();
+                    if (pay > 0) {
+                        balance += pay;
                         System.out.printf("""
                                 => Nộp thành công %,.2f VNĐ. Số dư mới: %,.2f VNĐ
                                 +-------------------------------------------------------+
                                 """,
-                                nop,
+                                pay,
                                 balance);
                     } else {
-                        System.out.println("So tien nop phai lon hon 0");
+                        System.out.println("Số tiền cần nộp phải lớn hơn 0");
                     }
                     break;
                 case 3:
                     System.out.println("Nhap so tien can rut: ");
-                    double rut = scanner.nextDouble();
-                    if (rut >0 && rut<= balance){
-                        balance -=rut;
+                    double withdraw  = scanner.nextDouble();
+                    if (withdraw >0 && withdraw<= balance){
+                        balance -=withdraw;
                         System.out.printf("""
-                             => Rut thành công %,.2f VNĐ. Số dư mới: %,.2f VNĐ
+                             => Rút thành công %,.2f VNĐ. Số dư mới: %,.2f VNĐ
                             +-------------------------------------------------------+
                             """,
-                                rut,
+                                withdraw,
                                 balance);
                     } else{
-                        System.out.print("So tien rut phai lon hon 0 va nho hon so du");
+                        System.out.print("Số tiền cần rút phải lớn hơn 0 và nhỏ hơn số dư");
                     }
                     break;
                 case 4:
                     System.out.print("=> Cảm ơn quý khách đã sử dụng dịch vụ ATM. Xin chào!");
                     break;
                 default:
-                    System.out.println("Lua chon khong hop le, vui long chon tu 1-4");
+                    System.out.println("Lựa chọn không hợp lệ, vui lòng chọn từ 1-4");
 
             }
         } while (num != 4);
+        scanner.close();
 
     }
 }
