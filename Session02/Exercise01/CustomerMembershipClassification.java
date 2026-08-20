@@ -10,13 +10,13 @@ public class CustomerMembershipClassification {
         double totalSpending = scanner.nextDouble();
         double chietKhau = 0;
         String hang;
-        if (totalSpending < 2000000) {
+        if (totalSpending <= 2000000) {
             chietKhau = 2;
             hang = "Dong(Bronze)";
-        } else if (totalSpending < 5000000) {
+        } else if (totalSpending <= 5000000) {
             chietKhau = 5;
             hang = "Bac(Silver)";
-        } else if (totalSpending < 15000000) {
+        } else if (totalSpending <= 15000000) {
             chietKhau = 10;
             hang = "Vang(Gold)";
         } else {
@@ -48,5 +48,6 @@ public class CustomerMembershipClassification {
                 chietKhau,
                 danhHieu
                 );
+        scanner.close();
     }
 }
