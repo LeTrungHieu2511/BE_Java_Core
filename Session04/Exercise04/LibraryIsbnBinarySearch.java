@@ -29,9 +29,9 @@ public class LibraryIsbnBinarySearch {
             }
         }
         if (index ==-1) {
-            find = "Khong tim thay";
+            find = "Không tìm thấy";
         } else{
-            find = "Tim thay tren ke sach";
+            find = "Tìm thấy trên kệ sách";
         }
         System.out.printf("""
                 +-------------------------------------------------------+
