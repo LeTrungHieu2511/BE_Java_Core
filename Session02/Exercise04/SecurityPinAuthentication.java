@@ -1,3 +1,5 @@
+package vn.edu.rikkei.session02.ex04;
+
 import java.util.Scanner;
 
 public class SecurityPinAuthentication {
@@ -5,7 +7,7 @@ public class SecurityPinAuthentication {
         Scanner scanner = new Scanner(System.in);
         final String SECRET_PIN = "889900";
         int maxAttempts = 1;
-        while (maxAttempts <3) {
+        while (maxAttempts <=3) {
             System.out.printf("[Lần %d/3] Nhập mã PIN bảo mật: ",maxAttempts);
             String matKhau =  scanner.nextLine();
 
@@ -21,6 +23,8 @@ public class SecurityPinAuthentication {
             System.out.printf(" => Mật khẩu không chính xác! Bạn còn %d lần thử.\n",3-maxAttempts);
             maxAttempts++;
         }
+        System.out.print(" Tài khoản bị quá do đã hết 3 lần thử");
+        scanner.close();
 
     }
 }
