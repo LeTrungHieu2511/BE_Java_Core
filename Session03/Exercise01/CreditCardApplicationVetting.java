@@ -1,3 +1,5 @@
+package  vn.edu.rikkei.session03.ex01;
+
 import java.util.Scanner;
 
 public class CreditCardApplicationVetting {
