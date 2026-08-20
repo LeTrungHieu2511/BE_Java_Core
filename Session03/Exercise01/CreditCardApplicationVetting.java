@@ -25,7 +25,7 @@ public class CreditCardApplicationVetting {
             isApproved  = "Ngoai do tuoi quy dinh";
         } else if (hasBadDebt == true) {
             isApproved = "Lich su tin dung co no xau";
-        } else if (monthlyIncome < 1000000) {
+        } else if (monthlyIncome < 10000000) {
             isApproved = "Thu nhap duoi muc toi thieu 10 trieu VND";
         } else {
             isApproved = "DAT YEU CAU";
