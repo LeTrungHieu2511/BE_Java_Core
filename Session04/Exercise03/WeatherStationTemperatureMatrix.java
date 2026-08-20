@@ -82,5 +82,6 @@ public class WeatherStationTemperatureMatrix {
 
         }
         System.out.println("+-----------------------------------------------------------------+");
+        sc.close();
     }
 }
