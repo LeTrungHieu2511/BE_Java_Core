@@ -35,7 +35,7 @@ public class WarehouseInventoryInspection {
                 minIndex = i;
             }
         }
-        double tonKhoBinhQuan = total*1.0/N;
+        double averageInventory = total*1.0/N;
 
         System.out.printf("""
                 +-------------------------------------------------------+
@@ -50,7 +50,7 @@ public class WarehouseInventoryInspection {
                 +-------------------------------------------------------+""",
                 Arrays.toString(stock),
                 total,
-                tonKhoBinhQuan,
+                averageInventory,
                 minIndex,
                 minStock
                 );
