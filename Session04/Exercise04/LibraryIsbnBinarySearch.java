@@ -49,5 +49,6 @@ public class LibraryIsbnBinarySearch {
                 steps
 
         );
+        sc.close();
     }
 }
