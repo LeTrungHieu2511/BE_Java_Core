@@ -24,17 +24,17 @@ public class StudentAcademicPerformanceAnalysis {
 
         double maxScore = scores[0];
         int count =0;
-        String danhSach ="";
+        String list ="";
         for (int i =0 ; i<N ; i++) {
             if (scores[i] > maxScore) {
                 maxScore = scores[i];
             }
             if(scores[i] >= 8) {
                 count++;
-                danhSach += String.format("HV #%d (%.1f) | ",i,scores[i]);
+                list += String.format("HV #%d (%.1f) | ",i,scores[i]);
             }
         }
-        double tiLe=count*100.0/N;
+        double ratio=count*100.0/N;
 
         System.out.printf("""
                 +-------------------------------------------------------+
@@ -49,8 +49,8 @@ public class StudentAcademicPerformanceAnalysis {
                 Arrays.toString(scores),
                 maxScore,
                 count,
-                tiLe,
-                danhSach
+                ratio,
+                list
         );
     }
 }
