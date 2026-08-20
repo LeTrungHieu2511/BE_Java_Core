@@ -1,4 +1,4 @@
-package Session04.Exercise04;
+package vn.edu.rikkei.session04.ex01;
 
 import java.util.Scanner;
 
