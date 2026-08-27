@@ -1,4 +1,4 @@
-package vn.edu.rikkei.Session07.Exercise01;
+package vn.edu.rikkei.session07.ex01;
 
 public class Main {
     public static void main(String[] args) {
