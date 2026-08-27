@@ -1,4 +1,4 @@
-package vn.edu.rikkei.Session07.Exercise03;
+package vn.edu.rikkei.session07.ex03;
 
 public class Employee {
 
