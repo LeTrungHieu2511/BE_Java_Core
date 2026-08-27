@@ -1,4 +1,4 @@
-package vn.edu.rikkei.Session07.Exercise04;
+package vn.edu.rikkei.session07.ex04;
 
 public class Student {
 
@@ -8,7 +8,6 @@ public class Student {
     private double literatureScore;
     private double englishScore;
 
-    // Constructor 5 tham số
     public Student(String studentId, String fullName,
                    double mathScore, double literatureScore, double englishScore) {
 
@@ -45,7 +44,6 @@ public class Student {
         }
     }
 
-    // Hiển thị hồ sơ học viên
     public void displayStudentProfile() {
         System.out.printf("""
                 +-------------------------------------------------------+
