@@ -1,4 +1,4 @@
-package vn.edu.rikkei.Session07.Exercise04;
+package vn.edu.rikkei.session07.ex04;
 
 public class Main {
 
